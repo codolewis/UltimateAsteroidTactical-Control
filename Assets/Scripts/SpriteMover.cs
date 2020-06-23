@@ -65,15 +65,15 @@ public class SpriteMover : MonoBehaviour
         {
                 if (Input.GetKey(KeyCode.W)) // If the W key is held down the sprite will move up until you let off the key
             {
-                    // Move up every frame draw by adding 1 to the y position
-                    tf.position = tf.position + (Vector3.up * MoveSpeed);
-                }
+                // Move up every frame draw by adding 1 to the y position
+                tf.position = tf.position + (tf.up * MoveSpeed);
+            }
 
                 if (Input.GetKey(KeyCode.S)) // If the S key is held down the sprite will move up until you let off the key
             {
-                    // Move down every frame draw by subtracting 1 to the y position
-                    tf.position = tf.position - (Vector3.up * MoveSpeed);
-                }
+                // Move down every frame draw by subtracting 1 to the y position
+                tf.position = tf.position - (tf.up * MoveSpeed);
+            }
 
                 if (Input.GetKey(KeyCode.D)) // If the D key is held down the sprite will move up until you let off the key
             {
