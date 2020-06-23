@@ -9,18 +9,31 @@ public class SpriteMover : MonoBehaviour
 {
     public Transform tf; // The variable that holds the Transform component
     public GameObject starShip; // The variable that holds the hero component
-    public float MoveSpeed = 1.0f; // The variable that holds the speed component
-    public float turnSpeed = 1.0f; // The variable for the degrees we rotate in one frame draw
+    public float MoveSpeed = 0; // The variable that holds the speed component
+    public int rotationSpeed = 1; // The variable for the degrees we rotate in one frame draw
 
     // Start is called before the first frame update
     void Start()
     {
         tf = GetComponent<Transform>();  // tf will get the component Transform
+        
     }
 
-    // Update is called once per frame
-    void Update()
+
+        // Update is called once per frame
+        void Update()
     {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            tf.Rotate(0, 0, rotationSpeed);
+        }
+
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            tf.Rotate(0, 0, -rotationSpeed);
+        }
+
         // Start of LeftShit 1 unit movement command
         if (Input.GetKey(KeyCode.LeftShift)) // if Left Shift key is held down
         {
@@ -75,11 +88,7 @@ public class SpriteMover : MonoBehaviour
                 }
         }
 
-        if (Input.GetKey(KeyCode.RightArrow)) // If the A key is held down the sprite will move up until you let off the key
-        {
-            // Move left every frame draw by subtracting 1 to the x position
-            tf.Rotate(turnSpeed, 0, 0);
-        }
+
         
 
 
