@@ -34,68 +34,18 @@ public class SpriteMover : MonoBehaviour
             tf.Rotate(0, 0, -rotationSpeed);
         }
 
-        // Start of LeftShit 1 unit movement command
-        if (Input.GetKey(KeyCode.LeftShift)) // if Left Shift key is held down
+        if (Input.GetKey(KeyCode.W)) // If the W key is held down the sprite will move up until you let off the key
         {
-            if (Input.GetKeyDown(KeyCode.W)) // If the W key is held down the sprite will move exactly 1 unit until pressed again
-            {
-                // Move up every frame draw by adding 1 to the y position
-                tf.position = tf.position + (Vector3.up);
-            }
-
-            if (Input.GetKeyDown(KeyCode.S)) // If the S key is held down the sprite will move exactly 1 unit until pressed again
-            {
-                // Move down every frame draw by subtracting 1 to the y position
-                tf.position = tf.position - (Vector3.up);
-            }
-
-            if (Input.GetKeyDown(KeyCode.D)) // If the D key is held down the sprite will move exactly 1 unit until pressed again
-            {
-                // Move right every frame draw by adding 1 to the x position
-                tf.position = tf.position + (Vector3.right);
-            }
-
-            if (Input.GetKeyDown(KeyCode.A)) // If the A key is held down the sprite will move exactly 1 unit until pressed again
-            {
-                // Move left every frame draw by subtracting 1 to the x position
-                tf.position = tf.position - (Vector3.right);
-            }
-        } 
-        else
-        {
-                if (Input.GetKey(KeyCode.W)) // If the W key is held down the sprite will move up until you let off the key
-            {
                 // Move up every frame draw by adding 1 to the y position
                 tf.position = tf.position + (tf.up * MoveSpeed);
-            }
-
-                if (Input.GetKey(KeyCode.S)) // If the S key is held down the sprite will move up until you let off the key
-            {
-                // Move down every frame draw by subtracting 1 to the y position
-                tf.position = tf.position - (tf.up * MoveSpeed);
-            }
-
-                if (Input.GetKey(KeyCode.D)) // If the D key is held down the sprite will move up until you let off the key
-            {
-                    // Move right every frame draw by adding 1 to the x position
-                    tf.position = tf.position + (Vector3.right * MoveSpeed);
-                }
-
-                if (Input.GetKey(KeyCode.A)) // If the A key is held down the sprite will move up until you let off the key
-            {
-                    // Move left every frame draw by subtracting 1 to the x position
-                    tf.position = tf.position - (Vector3.right * MoveSpeed);
-                }
         }
 
-
-        
-
-
-
-
-
-
+        if (Input.GetKey(KeyCode.S)) // If the S key is held down the sprite will move up until you let off the key
+        {
+                // Move down every frame draw by subtracting 1 to the y position
+                tf.position = tf.position - (tf.up * MoveSpeed);
+        }
+       
         if (Input.GetKeyDown(KeyCode.Escape)) // If the Escape key is pressed
         {
             Application.Quit(); // The application closes
