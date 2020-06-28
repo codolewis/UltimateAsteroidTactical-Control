@@ -6,6 +6,7 @@ public class PlayerShootScript : MonoBehaviour {
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +24,6 @@ public class PlayerShootScript : MonoBehaviour {
     void Shoot ()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Destroy(bulletPrefab, 2);
     }
 }

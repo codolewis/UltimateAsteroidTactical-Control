@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: b5be61aba7cdd404a83f7fe32d8855b1
+guid: d6039d34d527e2047bdff46ca665a84c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - starShip: {fileID: 3781983504156113564, guid: abc554801ad696a4194236cd9471bdca,
-      type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

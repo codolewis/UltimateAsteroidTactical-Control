@@ -12,7 +12,7 @@ public class NOESCAPE : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Destroy(gameObject);
+        other.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

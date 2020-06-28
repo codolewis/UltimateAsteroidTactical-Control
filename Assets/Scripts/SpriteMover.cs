@@ -11,7 +11,6 @@ public class SpriteMover : MonoBehaviour
     public GameObject starShip; // The variable that holds the hero component
     public float MoveSpeed = 0; // The variable that holds the speed component
     public int rotationSpeed = 1; // The variable for the degrees we rotate in one frame draw
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +18,8 @@ public class SpriteMover : MonoBehaviour
         
     }
 
-
-        // Update is called once per frame
-        void Update()
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
